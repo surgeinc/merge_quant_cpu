@@ -275,7 +275,7 @@ def process_mergeCPU(model_name, peft_model_name, output_dir, gpu_cpu, gpu_memor
     #}
     print(f"Loading tokenizer")
    
-    tokenizer = LlamaTokenizer.from_pretrained(base_model_name_or_path)
+    tokenizer = AutoTokenizer.from_pretrained(base_model_name_or_path)
     #max_shard_size="400MB"
     print(f"Saving model in 10GB shard size ... wait - don't touch anyhing yet!")
     yield f"Saving model in 10GB shard size ... wait - don't touch anyhing yet!"
